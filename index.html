@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#fbf8ef">
+  <meta name="description" content="Um desafio de 60 segundos para descobrir o que diferentes animais têm em comum.">
+  <title>Você conhece mesmo os animais? — SVB</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%235e3aa1'/%3E%3Cpath d='M18 26c0-7 6-12 14-12s14 5 14 12v12c0 8-6 14-14 14S18 46 18 38z' fill='%23fbf8ef'/%3E%3Ccircle cx='27' cy='32' r='3' fill='%235e3aa1'/%3E%3Ccircle cx='39' cy='32' r='3' fill='%235e3aa1'/%3E%3Cpath d='M28 41c3 3 6 3 9 0' fill='none' stroke='%235e3aa1' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="app" aria-live="polite">
+    <section class="screen intro active" data-screen="intro">
+      <img class="svb-logo" src="assets/logo-svb.png" alt="Sociedade Vegetariana Brasileira" width="879" height="900">
+      <div class="intro-copy">
+        <p class="eyebrow">QUEM É QUEM?</p>
+        <h1>Você conhece mesmo <em>os animais?</em></h1>
+        <p class="subtitle">Faça o teste. São só 60 segundos.</p>
+      </div>
+      <div class="animal-stage" aria-hidden="true">
+        <div class="animal-bubbles"><span>🐶</span><span>🐷</span><span>🐮</span><span>🐔</span></div>
+      </div>
+      <button class="primary" type="button" data-action="start">COMEÇAR <span aria-hidden="true">→</span></button>
+    </section>
+  </main>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
