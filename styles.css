@@ -1,37 +1,8 @@
-:root {
-  --ink: #17151d;
-  --cream: #fbf8ef;
-  --paper: #fffdf8;
-  --purple: #5e3aa1;
-  --purple-dark: #43247f;
-  --green: #72c94b;
-  --green-dark: #2e762b;
-  --pink: #ed4399;
-  --line: rgba(23, 21, 29, .13);
-  --shadow: 0 14px 40px rgba(44, 24, 87, .12);
-}
-* { box-sizing: border-box; }
-html, body { margin: 0; min-height: 100%; background: var(--cream); color: var(--ink); }
-body { font-family: "DM Sans", system-ui, sans-serif; overflow-x: hidden; }
-button, a { font: inherit; -webkit-tap-highlight-color: transparent; }
-button { color: inherit; }
-a { color: inherit; }
-img { display: block; max-width: 100%; height: auto; }
-#app { min-height: 100svh; }
-.screen { min-height: 100svh; padding: max(18px, env(safe-area-inset-top)) 20px max(22px, env(safe-area-inset-bottom)); display: none; opacity: 0; transform: translateY(7px); transition: opacity .32s ease, transform .32s ease; }
-.screen.active { display: flex; flex-direction: column; }
-.screen.entered { opacity: 1; transform: none; }
-.svb-logo { width: 66px; height: 68px; object-fit: contain; object-position: left center; filter: grayscale(1) brightness(0); }
-.primary, .light-button, .secondary { width: 100%; min-height: 58px; border: 0; border-radius: 18px; padding: 15px 20px; font-family: "Nunito", system-ui, sans-serif; font-weight: 900; font-size: .98rem; letter-spacing: .025em; cursor: pointer; display: flex; justify-content: center; align-items: center; gap: 10px; text-decoration: none; }
-.primary { background: var(--purple); color: white; box-shadow: 0 7px 0 var(--purple-dark); }
-.primary:active:not(:disabled) { transform: translateY(4px); box-shadow: 0 3px 0 var(--purple-dark); }
-.primary:disabled { opacity: .42; cursor: not-allowed; box-shadow: none; }
-button:focus-visible, a:focus-visible, summary:focus-visible { outline: 4px solid var(--pink); outline-offset: 3px; }
+@import url("https://cdn.jsdelivr.net/gh/larissamaluf/sevoceama@a027bf0998100f828dff07c7627122bf492648d9/styles.css");
 
-
-/* Abertura */
-.intro { position: relative; overflow: hidden; isolation: isolate; }
-.intro::before, .intro::after { content: ""; position: absolute; border-radius: 999px; z-index: -1; }
-.intro::before { width: 280px; height: 280px; background: var(--green); right: -150px; top: 19%; opacity: .18; }
-.intro::after { width: 220px; height: 220px; background: var(--purple); left: -125px; bottom: 12%; opacity: .11; }
-.intro-copy { margin-top: clamp(28px, 6vh, 62px); }
+/* Correção mobile: mantém artes e textos em blocos separados. */
+.bridge-inner img{width:min(118%,580px);margin:-18px 0 20px;}
+.final-art{margin:-12px -20px 18px;}
+.final-art img{width:min(112%,590px);}
+@media (min-width:720px){.final-art{margin-top:-24px;}}
+@media (max-height:700px){.bridge-inner img{width:min(100%,480px);margin-bottom:14px;}.final-art{margin-bottom:14px;}}
